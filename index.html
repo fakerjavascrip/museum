@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconstructing Urban Indian Identity Through Technology — Exhibit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/interactions.css">
+</head>
+<body>
+  <canvas id="grain-canvas" aria-hidden="true"></canvas>
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__ring"></span>
+    <span class="cursor__dot"></span>
+    <span class="cursor__label" id="cursor-label"></span>
+  </div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="site-header">
+    <span class="site-header__label">Exhibit</span>
+    <span class="site-header__count"><span id="current-index">01</span> / 07</span>
+  </header>
+
+  <section class="scene scene--intro" id="intro">
+    <span class="page-badge">Intro</span>
+    <div class="room" id="room">
+      <div class="room__wall room__wall--left" data-depth="0.4">
+        <p class="room__statement-label">Curator's Statement</p>
+        <p class="room__statement-sub">Academic Framework &amp; Thesis Statement</p>
+        <p class="room__lede">In Tommy Orange's novel <em>There There</em>, being an urban Indian means dealing with displacement. Left without their ancestral land and surrounded by the concrete city of Oakland, Native Americans face the threat of losing their culture. However, the modern city offers an unexpected tool for survival: technology.</p>
+      </div>
+      <div class="room__wall room__wall--center" data-depth="0.15">
+        <h1 class="room__title">Reconstructing<br>Urban Indian Identity<br>Through Technology</h1>
+        <div class="room__hero-frame" id="hero-frame" role="button" tabindex="0" aria-label="Click for static burst">
+          <img src="img/intro-hero.png" alt="Auckland skyline reflected in glass with a dreamcatcher" class="room__hero-img">
+          <div class="crt-overlay crt-overlay--intro" aria-hidden="true"></div>
+        </div>
+        <p class="room__credit">English 123 Final Project • Curator: Yifan Wang</p>
+      </div>
+      <div class="room__wall room__wall--right" data-depth="0.5">
+        <p class="room__statement-label">Core Thesis</p>
+        <blockquote class="room__thesis-quote">The central thesis of this exhibit is that technology is not where Native tradition ends; instead, it acts as a digital tool that allows urban Indians, like Orvil, Daniel, and Dene, to piece their fractured identities back together.</blockquote>
+        <p class="room__thesis-body">While curating this project, I realized that using digital tools to reclaim culture is highly complicated. By organizing these six artifacts, this exhibit shows the psychological journey of the urban Native community, moving from the history of media erasure to the desperate attempts at reconstruction, and finally into the dangerous reality of modern technology.</p>
+        <p class="room__statement-label room__gallery-heading">Gallery</p>
+        <div class="room__thumb-stack" id="thumb-stack">
+          <img src="img/90ce7b47e328ac7e715a2fb62cf8c9b0.jpg" alt="" class="room__thumb" data-index="0">
+          <img src="img/8bd3833a5ff105b3e0b86a3682368493.jpg" alt="" class="room__thumb" data-index="1">
+          <img src="img/b66b9867d9f22489876112bbc03bb057.jpg" alt="" class="room__thumb" data-index="2">
+          <img src="img/6f52f5f3569746c64a1eef38c82a220b.jpg" alt="" class="room__thumb" data-index="3">
+          <img src="img/246cb5a280a4ff713810b3127d292f6d.jpg" alt="" class="room__thumb" data-index="4">
+          <img src="img/37f26d93a68a2cb47f79c3ba64be41ce.jpg" alt="" class="room__thumb" data-index="5">
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" id="scroll-hint"><span>Scroll</span><div class="scroll-hint__line"></div></div>
+  </section>
+
+  <main class="exhibits" id="exhibits"></main>
+
+  <nav class="exhibit-nav" id="exhibit-nav" aria-label="Exhibit navigation">
+    <button type="button" data-goto="intro" class="is-active">Intro</button>
+    <button type="button" data-goto="0">01</button>
+    <button type="button" data-goto="1">02</button>
+    <button type="button" data-goto="2">03</button>
+    <button type="button" data-goto="3">04</button>
+    <button type="button" data-goto="4">05</button>
+    <button type="button" data-goto="5">06</button>
+    <button type="button" data-goto="6">07</button>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="js/exhibits-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/interactions.js"></script>
+</body>
+</html>

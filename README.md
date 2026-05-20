@@ -4,7 +4,7 @@ Interactive static exhibit: **Reconstructing Urban Indian Identity Through Techn
 
 ## Live site
 
-After deployment: https://fakerjavascrip.github.io/museum/
+https://fakerjavascrip.github.io/museum/
 
 ## Local preview
 
